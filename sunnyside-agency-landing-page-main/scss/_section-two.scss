@@ -1,0 +1,150 @@
+.section-two{
+    opacity: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    .section-content{
+        flex-basis: 100%;
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        transform: scale(0);
+        transition: all 1s;
+        .section-content-main{
+            width: 65%;
+            .section-content-head{
+                font-size: 3vw;
+                font-family: 'Fraunces', serif;
+                // width: 70%;
+                color: var(--Verydarkdesaturatedblue);
+                line-height: normal;
+            }
+            .section-content-text{
+                color: var(--Darkgrayishblue);
+                font-size: 1.5vw;
+                opacity: 0.8;
+                margin: 2vw 0px;
+            }
+            .section-content-action{
+                font-size: 1.5vw;
+                text-decoration: none;
+                color: var(--Verydarkdesaturatedblue);
+                text-transform: uppercase;
+                font-family: 'Fraunces', serif;
+                letter-spacing: 2px;
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    height: 1rem;
+                    left: -10px;
+                    right: -10px;
+                    top: 60%;
+                    background-color: var(--Softred);
+                    border-radius: 100px;
+                    opacity: 0.3;
+                    z-index: -1;
+
+                }
+                &:hover{
+                    &::after{
+                        
+                        opacity: 0.8;
+    
+                    }
+                }
+            }
+        }
+    }
+    .section-image{
+        flex-basis: 100%;
+        transform: scale(0);
+        transition: all 1s;
+        img{
+            width: 100%;
+        }
+    }
+}
+.loadcontent{
+    opacity: 1;
+    .section-content{
+        transform: scale(1);
+    }
+    .section-image{
+        transform: scale(1);
+    }
+}
+@media (max-width:750px)
+{
+    .section-two{
+        opacity: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        .section-content{
+            flex-basis: 100%;
+            display: flex;
+    
+            justify-content: center;
+            align-items: center;
+            .section-content-main{
+                padding: 4rem 0rem;
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .section-content-head{
+                    font-size: 2rem;
+                    font-family: 'Fraunces', serif;
+                    width: 70%;
+                    color: var(--Verydarkdesaturatedblue);
+                    line-height: normal;
+                    text-align: center;
+                }
+                .section-content-text{
+                    color: var(--Darkgrayishblue);
+                    font-size: 1rem;
+                    opacity: 0.8;
+                    margin: 2rem 0px;
+                    text-align: center;
+                }
+                .section-content-action{
+                    font-size: 1rem;
+                    text-decoration: none;
+                    color: var(--Verydarkdesaturatedblue);
+                    text-transform: uppercase;
+                    font-family: 'Fraunces', serif;
+                    letter-spacing: 2px;
+                    position: relative;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        height: 0.8rem;
+                        left: -10px;
+                        right: -10px;
+                        top: 60%;
+                        background-color: var(--Softred);
+                        border-radius: 100px;
+                        opacity: 0.3;
+                        z-index: -1;
+    
+                    }
+                }
+            }
+        }
+        .section-image{
+            flex-basis: 100%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .loadcontent{
+        opacity: 1;
+        .section-content{
+            transform: scale(1);
+        }
+        .section-image{
+            transform: scale(1);
+        }
+    }
+}

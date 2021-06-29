@@ -1,0 +1,103 @@
+.section-three{
+    display: flex;
+    
+    .section-content{
+        flex-basis: 100%;
+        display: flex;
+        opacity: 0;
+        transform: scale(0);
+        transition: all 1s;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        picture{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        
+        .section-content-main{
+            position: absolute;
+            bottom: 2rem;
+            // background-color: red;
+            // height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // justify-content: flex-end;
+            .section-content-head{
+                font-size: 2.5vw;
+                font-family: 'Fraunces', serif;
+                // width: 70%;
+                color: var(--Darkblue);
+                line-height: normal;
+            }
+            .section-content-text{
+                text-align: center;
+                color: var(--Darkblue);
+                font-size: 1.3vw;
+                opacity: 0.8;
+                margin: 2vw 0px;
+                width: 60%;
+            }
+            
+        }
+    }
+    .loadcontent{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@media (max-width:750px)
+{
+    .section-three{
+        
+        display: flex;
+        flex-direction: column;
+        .section-content{
+            flex-basis: 100%;
+            display: flex;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 1s;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            img{
+                width: 100%;
+            }
+            .section-content-main{
+                position: absolute;
+                bottom: 10vw;
+                // background-color: red;
+                // height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                // justify-content: flex-end;
+                .section-content-head{
+                    font-size: 2rem;
+                    font-family: 'Fraunces', serif;
+                    // width: 70%;
+                    color: var(--Darkblue);
+                    line-height: normal;
+                }
+                .section-content-text{
+                    text-align: center;
+                    color: var(--Darkblue);
+                    font-size: 1rem;
+                    opacity: 0.8;
+                    margin: 10vw 0px;
+                    width: 90%;
+                }
+                
+            }
+        }
+        .loadcontent{
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    
+}

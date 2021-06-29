@@ -1,0 +1,46 @@
+.section-images{
+    display: flex;
+    width: 100vw;
+    opacity: 0;
+    picture{
+        width: 25%;
+        transition: all 1s;
+        transform: scale(0);
+        img{
+            width: 100%;
+        }
+        
+    }
+}
+.loadcontent{
+    opacity: 1;
+    picture{
+        transform: scale(1);
+    }
+    
+}
+@media (max-width:750px)
+{
+    .section-images{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100vw;
+        opacity: 0;
+        picture{
+            width: 50%;
+            transition: all 1s;
+            transform: scale(0);
+            img{
+               width: 100%;
+            }
+            
+        }
+    }
+    .loadcontent{
+        opacity: 1;
+        picture{
+            transform: scale(1);
+        }
+        
+    }
+}
